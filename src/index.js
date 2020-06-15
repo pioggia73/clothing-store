@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {LinksProvider} from './context/links';
+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
+
   <React.StrictMode>
-    <App />
+      <LinksProvider>
+          <App />
+      </LinksProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
