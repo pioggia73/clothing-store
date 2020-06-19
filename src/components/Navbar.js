@@ -12,7 +12,7 @@ const Navbar = ({className}) => {
          <img src={logo} alt="company-logo" />
             <div>
                <ul className="links">
-                  <Link to='/' className='link'>shop</Link>
+                  <Link to='/shop' className='link'>shop</Link>
                   <Link to='/' className='link'>contact</Link>
                   <Link to='/' className='link'>sign in</Link> 
                </ul>

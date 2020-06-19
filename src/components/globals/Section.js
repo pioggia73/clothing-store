@@ -3,7 +3,7 @@ import {setRem} from '../../styles';
 
 const Section = styled.section`
 
-      padding: ${setRem(20)} ${setRem(20)};
+      padding: ${setRem(20)} ${setRem(60)};
 
 `
 export default Section;

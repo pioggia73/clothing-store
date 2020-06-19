@@ -1,10 +1,14 @@
 import { css } from "styled-components";
 
 export const setColors = {
-         mainWhite: "#fff",
-         mainBlack: "#222",
-         mainGrey: "#ececec",
-         lightBlue: "#6666ff",
+        mainWhite: "#fff",
+        mainBlack: "#222",
+        mainGrey: "#ececec",
+        lightBlue: "#6666ff",
+        green: '#3cb371',
+        yellow: '#ffa500',
+        pink: '#ee82ee',
+        violet: '#6a5acd'
        };
 
 export const setRem = (number = 16) => {
@@ -13,6 +17,10 @@ export const setRem = (number = 16) => {
 
 export const setFlex = ({ x = "center", y = "center" } = {}) => {
   return `display:flex; align-items:${y}; justify-content:${x}`;
+};
+
+export const setLetterSpacing = (number = 2) => {
+  return `letter-spacing:${number}px`;
 };
 
 export const setTransition = ({
@@ -28,6 +36,14 @@ export const setShadow = ({
   dark: "box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);",
   darkest: "box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);"
 });
+
+export const setBorder = ({
+  width = "2px",
+  style = "solid",
+  color = "black"
+} = {}) => {
+  return `border:${width} ${style} ${color}`;
+};
 
 const sizes = {
   large: 1200,

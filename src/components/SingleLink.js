@@ -1,14 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import {setColors, setRem, setTransition, setShadow} from '../styles';
+import {setColors, setRem, setTransition} from '../styles';
 
-const SingleLink = ({className, title, url, path}) => {
+const SingleLink = ({className, title, url, path, size}) => {
    
    return (
       <article className={className}>
 
-         <div className='single-link'>
+         <div className= {`${size} single-link`}>
             <img src={url} alt='link'/>
             <div className='link-text'>
             <Link to={path}>
@@ -20,29 +20,31 @@ const SingleLink = ({className, title, url, path}) => {
       </article>
    )
 }
+
 export default styled(SingleLink)`
 
    .single-link {
       width: 100%;
-      max-height: ${setRem(250)};
+      max-height: ${setRem(240)};
       position: relative;
       overflow: hidden;
-      
      
-      &:hover img {
-         scale: 1.1;
-      }
-
-      &:hover .link-text {
-         opacity: .7;
-      }
-
-      img {
-         width: 100%;
-         ${setTransition()};
-      }
+         &:hover img {
+            scale: 1.1;
          }
-      
+
+         &:hover .link-text {
+            opacity: .7;
+         }
+
+         img {
+            width: 100%;
+            ${setTransition()};
+         }
+
+         
+   }   
+
       .link-text {
          position: absolute;
          top: 50%;
@@ -54,7 +56,6 @@ export default styled(SingleLink)`
          text-align: center;
          ${setTransition()};
          width: 50%;
-          ${setShadow.dark};
         
          h4 {
             text-transform: uppercase;
@@ -66,6 +67,5 @@ export default styled(SingleLink)`
             font-weight: bold;
          }
       }
-
 `;
 
